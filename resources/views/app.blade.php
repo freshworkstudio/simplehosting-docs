@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>{{ isset($title) ? $title . ' - ' : null }}Laravel - The PHP Framework For Web Artisans</title>
+	<title>{{ isset($title) ? $title . ' - ' : null }}Ayuda | SimpleHosting Chile</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="author" content="Taylor Otwell">
 	<meta name="description" content="Laravel - The PHP framework for web artisans.">
@@ -15,6 +15,7 @@
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
     <link href='https://fonts.googleapis.com/css?family=Miriam+Libre:400,700|Source+Sans+Pro:200,400,700,600,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{{ elixir('assets/css/laravel.css') }}">
 	<link rel="apple-touch-icon" href="/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
@@ -25,14 +26,13 @@
 
 	<nav class="main">
 		<a href="/" class="brand nav-block">
-			{!! svg('laravel-logo') !!}
-			<span>Laravel</span>
+			<span>SimpleHosting</span>
 		</a>
 
-        <div class="search nav-block">
+        {{-- <div class="search nav-block">
             {!! svg('search') !!}
             <input placeholder="search" type="text" v-model="search" id="search-input" v-on:blur="reset" />
-        </div>
+        </div> --}}
 
 		<ul class="main-nav" v-if="! search">
 			@include('partials.main-nav')

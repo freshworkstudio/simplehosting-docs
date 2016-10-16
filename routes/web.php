@@ -3,7 +3,7 @@
 /**
  * Set the default documentation version...
  */
-define('DEFAULT_VERSION', '5.3');
+define('DEFAULT_VERSION', 'master');
 
 /**
  * Convert some text to Markdown...
@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('marketing')->with(['currentVersion' => DEFAULT_VERSION]);
 });
 
-Route::get('docs', 'DocsController@showRootPage');
-Route::get('docs/{version}/{page?}', 'DocsController@show');
+Route::get('content', 'DocsController@showRootPage');
+Route::get('content/{version}/{page?}', 'DocsController@show');

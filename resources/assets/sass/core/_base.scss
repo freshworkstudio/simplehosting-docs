@@ -4,8 +4,13 @@ body {
 	color: $color__gray;
 	font-family: $font;
 	font-size: 16px;
-	background: #fff url('/assets/img/cloud-bar.png') repeat-x;
-	padding-top: 10px;
+	background: #fff;
+	&:before{
+		content: "";
+		display: block;
+		height: 10px;
+		background: $color__blue;
+	}
 }
 
 h1, h2, h3, h4 {
@@ -18,7 +23,7 @@ h1, h2, h3, h4 {
 }
 
 a {
-	color: $color__salmon;
+	color: $color__blue;
 	text-decoration: none;
 }
 

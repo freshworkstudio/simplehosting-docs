@@ -32,7 +32,7 @@ class DocsController extends Controller
      */
     public function showRootPage()
     {
-        return redirect('docs/'.DEFAULT_VERSION);
+        return redirect('content/'.DEFAULT_VERSION);
     }
 
     /**
@@ -45,15 +45,14 @@ class DocsController extends Controller
     public function show($version, $page = null)
     {
         if (! $this->isVersion($version)) {
-            return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
+            return redirect('content/'.DEFAULT_VERSION.'/'.$version, 301);
         }
 
         if (! defined('CURRENT_VERSION')) {
             define('CURRENT_VERSION', $version);
         }
-
-        $sectionPage = $page ?: 'installation';
-        $content = $this->docs->get($version, $sectionPage);
+	    $sectionPage = $page ?: 'getting-started';
+	    $content = $this->docs->get($version, $sectionPage);
 
         if (is_null($content)) {
             abort(404);
@@ -66,17 +65,16 @@ class DocsController extends Controller
         if ($this->docs->sectionExists($version, $page)) {
             $section .= '/'.$page;
         } elseif (! is_null($page)) {
-            return redirect('/docs/'.$version);
+            return redirect('/content/'.$version);
         }
 
         $canonical = null;
 
         if ($this->docs->sectionExists(DEFAULT_VERSION, $sectionPage)) {
-            $canonical = 'docs/'.DEFAULT_VERSION.'/'.$sectionPage;
+            $canonical = 'content/'.DEFAULT_VERSION.'/'.$sectionPage;
         }
-
         return view('docs', [
-            'title' => count($title) ? $title->text() : null,
+            'title' => count($title) ? utf8_decode($title->text()) : null,
             'index' => $this->docs->getIndex($version),
             'content' => $content,
             'currentVersion' => $version,
