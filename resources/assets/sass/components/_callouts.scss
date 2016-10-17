@@ -102,8 +102,8 @@
 
 }
 
-.callout.forge {
-    background: url('/assets/img/forge-flames.jpg') no-repeat;
+.callout.simplehosting {
+    background: #eee no-repeat;
     background-size: cover;
     min-height: 420px;
     display: flex;
@@ -121,7 +121,7 @@
 
     p {
         @include smooth;
-        color: #fff;
+        color: #333;
         font-size: 17px;
         line-height: 1.6;
         margin: 0 0 20px;

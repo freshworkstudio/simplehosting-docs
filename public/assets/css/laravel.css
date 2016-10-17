@@ -1457,8 +1457,8 @@ pre.line-numbers > code {
     line-height: 1.6;
     margin: 0; }
 
-.callout.forge {
-  background: url("/assets/img/forge-flames.jpg") no-repeat;
+.callout.simplehosting {
+  background: #eee no-repeat;
   background-size: cover;
   min-height: 420px;
   display: -webkit-box;
@@ -1467,15 +1467,15 @@ pre.line-numbers > code {
   align-items: center;
   padding: 20px;
   margin: 40px 0 60px; }
-  .callout.forge:hover {
+  .callout.simplehosting:hover {
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2); }
-  .callout.forge svg {
+  .callout.simplehosting svg {
     margin-bottom: 30px; }
-  .callout.forge .content {
+  .callout.simplehosting .content {
     padding: 30px; }
-  .callout.forge p {
+  .callout.simplehosting p {
     -webkit-font-smoothing: antialiased;
-    color: #fff;
+    color: #333;
     font-size: 17px;
     line-height: 1.6;
     margin: 0 0 20px; }
