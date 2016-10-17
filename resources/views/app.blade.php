@@ -53,7 +53,7 @@
 		<ul>
 			@include('partials.main-nav')
 		</ul>
-		<p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
+		<p>Diseño basado en el repositorio de laravel.com. </p>
 		<p class="less-significant">
             <a href="http://jackmcdade.com">
                 Designed by<br>
